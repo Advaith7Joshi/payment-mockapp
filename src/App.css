@@ -1,0 +1,719 @@
+:root {
+    background-color: #fff;
+    --color-text: #000;
+}
+
+@font-face {
+    font-family: "IBM Plex Sans";
+    src: url("./assets/font/IBMPlexSans-Regular.ttf") format("ttf");
+    font-style: normal;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"); */
+
+.Background {
+    position: fixed;
+    background-color: #000;
+    box-shadow: 0px 12.93px 28.74px 0px #ffd28db2 inset;
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    top: -60vw;
+    left: -14.27vw;
+    transform: rotate(15.25deg);
+}
+
+.App {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+text {
+    color: var(--color-text);
+}
+
+.Banner {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.Logo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.Logo--react {
+    width: 100px;
+    height: 100px;
+}
+
+.Logo--lynx {
+    width: 100px;
+    height: 100px;
+    animation: Logo--shake infinite 0.5s ease;
+}
+
+@keyframes Logo--spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes Logo--shake {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.Title {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "IBM Plex Sans";
+}
+
+.Subtitle {
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.Description {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 15rpx;
+}
+
+.Hint {
+    font-size: 12px;
+    margin: 5px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #121212;
+}
+
+.btn-text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Dashboard {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.topBar {
+    flex-shrink: 0; /* Prevent the top bar from shrinking */
+    padding: 8px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 50px;
+}
+
+.topBar text {
+    font-size: 18px;
+}
+
+.btn-mini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #121212;
+}
+
+.btn-mini text {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-active {
+    color: #000;
+    font-weight: 600;
+}
+
+.nav-inactive {
+    color: gray;
+    font-weight: 500;
+}
+
+.navbar text {
+    font-size: 18px;
+}
+
+.balance {
+    padding: 30px;
+}
+
+.balance text {
+    font-size: 40px;
+}
+
+.wallet-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80%;
+    padding: 30px;
+    gap: 8px;
+}
+
+.round {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 100%;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-btn {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 100%;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-btn text {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.transactions {
+    padding: 30px;
+}
+
+.transaction-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.transaction-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.transaction-card-date {
+    font-size: 14px;
+    color: gray;
+}
+
+.transaction-card-body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.transaction-card-description {
+    font-size: 16px;
+    color: #aaa;
+    flex: 1;
+}
+
+.transaction-card-amount {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.transaction-card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.transaction-card-status {
+    font-size: 14px;
+    color: gray;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#debit {
+    color: crimson;
+    text-shadow: 0px 0px 4px crimson;
+}
+
+#credit {
+    color: #04ad83;
+    text-shadow: 0px 0px 2px #04ad83;
+}
+
+.chart-container {
+    padding: 0 30px;
+    margin-bottom: 20px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.chart-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.chart-legend {
+    display: flex;
+    gap: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+#btc-color {
+    background-color: #f7931a;
+}
+
+#eth-color {
+    background-color: #627eea;
+}
+
+#portfolio-color {
+    background-color: #000;
+}
+
+.legend-text {
+    font-size: 12px;
+    color: gray;
+}
+
+.chart {
+    height: 180px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Replace clip-path graphs with simpler visualization */
+.chart-line {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+}
+
+#btc-line {
+    height: 2px;
+    background-color: #f7931a;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+#eth-line {
+    height: 2px;
+    background-color: #627eea;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+#portfolio-line {
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chart-timeframe {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.timeframe-option {
+    font-size: 14px;
+    color: gray;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.timeframe-option.active {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+    font-weight: 600;
+}
+
+.portfolio-container {
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.investment-card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 12px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.investment-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 16px;
+    font-weight: bold;
+}
+
+.btc-icon {
+    background-color: #f7931a;
+    color: white;
+}
+
+.eth-icon {
+    background-color: #627eea;
+    color: white;
+}
+
+.sol-icon {
+    background-color: #14f195;
+    color: black;
+}
+
+.investment-details {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.investment-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    display: block;
+}
+
+.investment-symbol {
+    font-size: 14px;
+    color: gray;
+    display: block;
+}
+
+.investment-value-container {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.investment-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    display: block;
+}
+
+.investment-change {
+    font-size: 14px;
+    display: block;
+}
+
+.positive {
+    color: #04ad83;
+}
+
+.negative {
+    color: crimson;
+}
+
+.neutral {
+    color: gray;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    margin-top: 20px;
+}
+
+.action-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #121212;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.action-text {
+    font-size: 14px;
+    color: #000;
+}
+
+.settings-container {
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.settings-scroll-container {
+    height: calc(100vh - 100px); /* Adjust based on your topBar height */
+    overflow: scroll; /* Use simple 'scroll' instead of auto */
+    padding-bottom: 30px; /* Ensures space at the bottom after scrolling */
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.avatar-initials {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profile-email {
+    font-size: 16px;
+    color: gray;
+}
+
+.settings-section {
+    margin-bottom: 30px;
+}
+
+.settings-section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.settings-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 16px;
+    background-color: #f5f5f5;
+}
+
+.settings-item-content {
+    flex: 1;
+}
+
+.settings-item-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    display: block;
+}
+
+.settings-item-description {
+    font-size: 14px;
+    color: gray;
+    display: block;
+}
+
+.settings-item-action {
+    font-size: 20px;
+    color: gray;
+    margin-left: 10px;
+}
+
+.toggle-switch {
+    width: 50px;
+    height: 28px;
+    background-color: #e0e0e0;
+    border-radius: 14px;
+    position: relative;
+}
+
+.toggle-switch::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.2s ease;
+}
+
+.toggle-switch.active {
+    background-color: #04ad83;
+}
+
+.toggle-switch.active::after {
+    left: 24px;
+}
+
+.logout-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.logout-button {
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logout-button-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: crimson;
+}
+
+/* Individual icon styling - can be replaced with actual icons */
+.account-icon,
+.security-icon,
+.payment-icon,
+.notifications-icon,
+.appearance-icon,
+.language-icon,
+.help-icon,
+.privacy-icon,
+.about-icon {
+    font-size: 22px;
+}

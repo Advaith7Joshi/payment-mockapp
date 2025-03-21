@@ -1,0 +1,29 @@
+{
+  "name": "helloworlf",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rspeedy build",
+    "check": "biome check --write",
+    "dev": "rspeedy dev",
+    "format": "biome format --write",
+    "preview": "rspeedy preview"
+  },
+  "dependencies": {
+    "@lynx-js/react": "^0.105.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@lynx-js/qrcode-rsbuild-plugin": "^0.3.3",
+    "@lynx-js/react-rsbuild-plugin": "^0.9.0",
+    "@lynx-js/rspeedy": "^0.8.2",
+    "@lynx-js/types": "^3.2.0",
+    "@types/react": "^18.3.18",
+    "typescript": "~5.7.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true,
+  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
+}
